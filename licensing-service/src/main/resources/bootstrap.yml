@@ -1,0 +1,28 @@
+# 应用名称
+spring:
+  application:
+    name: licensing-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8071/
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      base-path: '/'
+      exposure:
+        include: env, health, info
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  health:
+    db:
+      enabled: false
+    diskspace:
+      enabled: true
