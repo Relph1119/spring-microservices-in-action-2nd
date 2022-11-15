@@ -1,0 +1,19 @@
+### licensing-service/default
+GET http://localhost:8071/licensing-service/default
+Accept: application/json
+
+### licensing-service/dev
+GET http://localhost:8071/licensing-service/dev
+Accept: application/json
+
+### encrypt
+POST http://localhost:8071/encrypt
+Content-Type: text/plain
+
+root
+
+### decrypt
+POST http://localhost:8071/decrypt
+Content-Type: text/plain
+
+196df9ab75f3516eed8a47b237f5d3a288ffdd4863c40988873383c1ac854513
