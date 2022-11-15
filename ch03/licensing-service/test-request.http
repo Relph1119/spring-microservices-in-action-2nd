@@ -1,0 +1,48 @@
+### GET request with a header
+GET http://localhost:8080/v1/organization/optimaGrowth/license/0235431845
+Accept: application/json
+
+### DELETE request with a header
+DELETE http://localhost:8080/v1/organization/optimaGrowth/license/0235431845
+Accept: application/json
+
+### POST request with a header
+POST http://localhost:8080/v1/organization/optimaGrowth/license
+Content-Type: application/json
+
+{
+    "licenseId": "0235431845",
+    "organizationId": "Optima Growth",
+    "description": "Software product",
+    "productName": "Ostock",
+    "licenseType": "complete"
+}
+
+### PUT request with a header
+PUT http://localhost:8080/v1/organization/optimaGrowth/license
+Content-Type: application/json
+
+{
+  "licenseId": "0235431845",
+  "organizationId": "Optima Growth",
+  "description": "Software product",
+  "productName": "Ostock",
+  "licenseType": "complete"
+}
+
+### POST request with a header
+POST http://localhost:8080/v1/organization/optimaGrowth/license
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "licenseId": "0235431845",
+  "organizationId": "Optima Growth",
+  "description": "Software product",
+  "productName": "Ostock",
+  "licenseType": "complete"
+}
+
+### health
+GET http://localhost:8080/actuator/health
+Accept: application/json
