@@ -10,10 +10,10 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class LicensingServiceApplication {
+public class LicenseServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LicensingServiceApplication.class, args);
+        SpringApplication.run(LicenseServiceApplication.class, args);
     }
 
     @Bean
