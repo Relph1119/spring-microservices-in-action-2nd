@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "management.endpoints.enabled-by-default",
+      "type": "java.lang.String",
+      "description": "Description for management.endpoints.enabled-by-default."
+  }
+] }
