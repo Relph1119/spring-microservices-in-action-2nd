@@ -1,0 +1,20 @@
+### licensing-service/default
+GET http://localhost:8071/licensing-service/default
+Accept: application/json
+
+### licensing-service/dev
+GET http://localhost:8071/licensing-service/dev
+Accept: application/json
+
+### encrypt
+POST http://localhost:8071/encrypt
+Content-Type: text/plain
+
+root
+
+### decrypt
+POST http://localhost:8071/decrypt
+Content-Type: text/plain
+
+### organizationId=e6a625cc-718b-48c2-ac76-1dfdff9a531e
+GET http://localhost:8080/v1/organization/e6a625cc-718b-48c2-ac76-1dfdff9a531e/license/
