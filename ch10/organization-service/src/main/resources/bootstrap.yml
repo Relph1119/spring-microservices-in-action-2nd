@@ -1,0 +1,14 @@
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.optimagrowth: DEBUG
+
+spring:
+  application:
+    name: organization-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8071/

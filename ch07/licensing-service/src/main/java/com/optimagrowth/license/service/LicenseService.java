@@ -82,7 +82,7 @@ public class LicenseService {
         return responseMessage;
     }
 
-    public License getLicense(String organizationId, String licenseId, String clientType) {
+    public License getLicense(String licenseId, String organizationId, String clientType) {
         License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
         if (null == license) {
             throw new IllegalArgumentException(String.format(
@@ -142,7 +142,7 @@ public class LicenseService {
     }
 
     @CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
-    @Bulkhead(name = "licenseService", type= Bulkhead.Type.THREADPOOL, fallbackMethod = "buildFallbackLicenseList")
+    @Bulkhead(name = "licenseService", type = Bulkhead.Type.THREADPOOL, fallbackMethod = "buildFallbackLicenseList")
     @Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseList")
     @RateLimiter(name = "licenseService", fallbackMethod = "buildFallbackLicenseList")
     public List<License> getLicensesByOrganization(String organizationId) {
@@ -153,6 +153,7 @@ public class LicenseService {
 
     /**
      * 后备处理
+     *
      * @param organizationId
      * @param t
      * @return
@@ -164,6 +165,6 @@ public class LicenseService {
         license.setOrganizationId(organizationId);
         license.setProductName("Sorry no licensing information currently available");
         fallbackList.add(license);
-        return  fallbackList;
+        return fallbackList;
     }
 }

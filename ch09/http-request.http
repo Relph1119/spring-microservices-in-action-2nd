@@ -1,6 +1,6 @@
 ### Get token with keycloak
 POST http://keycloak:8080/auth/realms/spmia-realm/protocol/openid-connect/token
-Authorization: Basic ostock 2w73UoPtxjkzOwZA5wt1WdFGyEH7znoS
+Authorization: Basic ostock 4mIythqWEy5KaDbAzm5ZRKJTq08PAti9
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=password&username=illary.huaylupo&password=password1

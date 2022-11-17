@@ -82,7 +82,7 @@ public class LicenseService {
         return responseMessage;
     }
 
-    public License getLicense(String organizationId, String licenseId, String clientType) {
+    public License getLicense(String licenseId, String organizationId, String clientType) {
         License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
         if (null == license) {
             throw new IllegalArgumentException(String.format(
