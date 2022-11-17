@@ -1,8 +1,0 @@
-### Get organization by gateway
-GET http://localhost:8072/organization-service/v1/organization/e6a625cc-718b-48c2-ac76-1dfdff9a531e
-
-### Get gateway routes
-GET http://localhost:8072/actuator/gateway/routes
-
-### Get organization with routes
-GET http://localhost:8072/organization/v1/organization/e6a625cc-718b-48c2-ac76-1dfdff9a531e
